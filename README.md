@@ -6,7 +6,7 @@ and process data actions that are executed in that repo (for example who pushed 
 It uses webhook from Github to call an Azure function which creates a Azure Service Bus message and push it to the queue. Then if GithubProcessor Azure function is available it consumes the message and adds prepared data to Azure Cosmos DB.
 From now on it is possible for Django WebApp to read the data and display to the end user.
 
-Infrustructure could be simplified but using two azure functions and service bus has big advantages. It does not matter whether processor function or cosmos db are available. When these services are down, message waits in the queue and is consumed as soon as services are back online. Even if only Cosmos DB is unavailable, consuming service bus message will be unsuccessfull which means that message will be back in the queue to be processed at later time.
+Infrustructure could be simplified but project has a goal to present how Azure functions along with queues can work together to create services and application that can work independently but in the same time share data. For example in this case it does not matter whether processor function or cosmos db are available. When these services are down, message waits in the queue and is consumed as soon as services are back online. Even if only Cosmos DB is unavailable, consuming service bus message will be unsuccessfull which means that message will be back in the queue to be processed at later time.
 
 ## Application components
 
