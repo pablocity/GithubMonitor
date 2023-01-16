@@ -1,0 +1,27 @@
+h1.center {
+    text-align: center;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  .footer {
+    text-align: center;
+    position: absolute;
+    bottom:0;
+    width:100%;
+    background-color: #f2f2f2;
+    padding:10px;
+  }
+  
